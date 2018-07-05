@@ -4,7 +4,7 @@
 */
 function mostrar()
 {
-	var dato
+	var dato;
 	dato=prompt("ingrese un dato");
-	document.getElementById("elNombre").value=dato
+	document.getElementById("elNombre").value=dato;
 }
