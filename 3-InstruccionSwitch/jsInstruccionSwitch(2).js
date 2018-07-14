@@ -1,13 +1,16 @@
 function mostrar()
 {
-//tomo la edad
-var mesDelAño = document.getElementById('mes').value;
+var mes = document.getElementById("mes").value;
 switch (mes)
  {
-    case "Enero":
-
+    case "Enero": 
+    case "Febrero":
+    case "Marzo":
+    case "Abril":
+    case "Mayo":
+    case "Junio":
     alert("falta para el invierno")
-    break;
+    break; 
 
     case "Julio":
     case "Agosto":
@@ -16,7 +19,7 @@ switch (mes)
 
     default:
     alert("ya pasamos el frio, ahora calor")
-    break;
+   
   }
 
 

@@ -9,52 +9,63 @@
 Desde  6 Intentos hasta 10:”falta técnica”
 Más de 10 intentos: “afortunado en el amor!!”.*/
 var secreto;
-var cont=0
+var cont;
 function comenzar()
 {
-      secreto= Math.round(Math.random()*100)
-	    console.log("numero aleatorio: " + secreto)
+	cont = 0;
+	document.getElementById("intentos").value="";
+	document.getElementById("numero").value="";
+
+        secreto= Math.round(Math.random()*100);
+	    console.log("numero aleatorio: " + secreto);
 }
 function verificar()
 {
-	var num=document.getElementById("numero").value
-	cont++
+	var num=document.getElementById("numero").value;
+	
+	cont++;
+	console.log("intento: " + cont);
 
-	if( num==secreto)
-		{
-     document.getElementById("intentos").value=("usted es un Psíquico")
-		  }
+if(num==secreto)
+{
+	if(cont==1)
+	{
+		document.getElementById("intentos").value=("usted es un Psíquico" );
+	}
+    
+	if(cont==2)
+	{
+		document.getElementById("intentos").value=("excelente percepción" );
+	}
+    
+	if(cont==3)
+	{
+		document.getElementById("intentos").value=("esto es suerte" );
+	}
+    
+    if(cont==4)
+	{
+		document.getElementById("intentos").value=("excelente tecnica" );
 
-  if (num==secreto)
- 		{
-     document.getElementById("intentos").value=("excelente percepcion")
-		}
+	}
 
-		if (num==secreto)
-	 		{
-	     document.getElementById("intentos").value=("esto es suerte")
-			}
+    if(cont==5)
+	{
+		document.getElementById("intentos").value=("usted esta en la media" );
+	}
 
-			if (num==secreto)
-		 		{
-		     document.getElementById("intentos").value=("excelente tecnica ")
-			  }
+    if(cont>=6 && cont <=10)
+	{
+       document.getElementById("intentos").value=("falta tecnica" ); 
+	}
+    if(cont>10)
+	{
+	document.getElementById("intentos").value=("afortunado en el amor" );
+	}
 
-				if (num==secreto)
-			 		{
-			     document.getElementById("intentos").value=("usted esta en la media")
-					}
+ }
 
-           else if(num==secreto)
-					 {
- 			     document.getElementById("intentos").value=("falta tecnica")
- 					}
-
-					else
-					{
-			     document.getElementById("intentos").value=("afortunado en el amor")
-					}
-
+	
 
 
 }
