@@ -1,14 +1,32 @@
 function mostrar()
+{   var cont=0;
+	var posi=0;
+	var nega=1;
+	var res='si';
+	var num=0
+while(res=="si")
 {
+	num=parseInt(prompt("ingrese numero"))
+	res=prompt(" quiere ingresar otro numero? ")
+	 
+	if (num>=0)
+	{
+    posi+=num
+	}
+	else
+    {
+		nega*=num
+	}
 
-	var contador=0;
-	var positivo=0;
-	var negativo=1;
-	
-	var respuesta='si';
+}
 
 
-document.getElementById('suma').value=positivo;
-document.getElementById('producto').value=negativo;
+
+
+
+
+
+document.getElementById('suma').value=posi;
+document.getElementById('producto').value=nega;
 
 }//FIN DE LA FUNCIÓN
