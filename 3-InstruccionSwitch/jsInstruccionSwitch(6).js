@@ -1,5 +1,5 @@
 function mostrar()
-{// tiene un error, si pongo 25 me dice es de noche y despues la hora no existe 
+{
     var hora = document.getElementById('hora').value;
      switch(hora)
     { case "7":
@@ -21,14 +21,23 @@ function mostrar()
      alert("Es de tarde")
      break;
 
-     default:
+      case "20":
+      case "21":
+      case "22":
+      case "23":
+      case "24":
+      case "1":
+      case "2":
+      case "3":
+      case "4":
+      case "5":
+      case "6":
      alert("es de noche")
      break;
-   }
-    if(hora >24)
-  {
-    alert("la hora no existe")
-  }
+   
+  default:
+  alert("la hora no existe")
+    }
 
 }
 //FIN DE LA FUNCIÓN

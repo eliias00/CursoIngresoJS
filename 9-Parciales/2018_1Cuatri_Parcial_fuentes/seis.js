@@ -23,15 +23,26 @@ function mostrar()
             alert(" es de tarde")
             break;
 
+            case "20":
+            case "21":
+            case "22":
+            case "23":
+            case "24":
+            case "1":
+            case "2":
+            case "3":
+            case "4":
+            case "5":
+            alert("es de noche")
+            break;
+       
             default:
-            alert(" es de noche")
+            alert(" la hora no es valida");
+   
         }
   
-         if (hora <0 || hora >24)        
-            {
-                alert("la hora no es valida")
-            }
-    else if (hora >=20 && hora <=24)  
+         
+     if (hora >=20 && hora <=24)  
             {
                 alert(" a dormir")      
             }

@@ -1,9 +1,9 @@
 function mostrar()
-{
+{//como se puede escribir mas grande en la pagina de document
 	var res="s";
     var num
-	var sumaneg
-	var sumapos
+	var sumaneg=0
+	var sumapos=0
 	var cantpos=0
 	var cantneg=0
 	var cantceros=0
@@ -18,12 +18,12 @@ function mostrar()
 
 	  if(num<0)
 	  {
-	   sumaneg =+num
+	   sumaneg+=num
 	   cantneg++
 	  }
 	  else if(num>0)
 	  {
-		  sumapos=num + num
+		  sumapos+=num
 		  cantpos++
 	  }
 	  else{
@@ -50,5 +50,5 @@ document.write("cantidad de ceros : " + cantceros  + "<br\>")
 document.write("cantidad de numeros pares : " + cantnumpar  + "<br\>")
 document.write("promedio de positivos : " + prompos  + "<br\>")
 document.write("promedio de negativos : " + promneg  + "<br\>")
-
+document.write("hay: " + cantneg + " negativos y hay: "  + cantpos + " positivos" + "<br\>")
 }//FIN DE LA FUNCIÓN
