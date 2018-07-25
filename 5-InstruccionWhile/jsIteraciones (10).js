@@ -9,28 +9,36 @@ function mostrar()
 	var cantceros=0
 	var cantnumpar=0
 	var prompos
+	var promneg
+    
     while(res=="s")
 	{ 
 	  num=parseInt(prompt("ingrese numero"))
 	  res=prompt(" quiere ingresar otro numero? ")
 
-	  if(num<=0)
+	  if(num<0)
 	  {
-       sumaneg =num +num
+	   sumaneg =+num
+	   cantneg++
 	  }
-	  if(num>0)
+	  else if(num>0)
 	  {
 		  sumapos=num + num
+		  cantpos++
+	  }
+	  else{
+		cantceros++
 	  }
 	  
-	  cantpos++
-	  cantneg++
-	  cantceros++
 	  
-	  if(num%2==0){
+	  if(num%2==0)
+	  {
 		  cantnumpar++
 	  }
-prompos= cantpos/num
+prompos= sumapos/cantpos
+
+promneg=sumaneg/cantneg
+
 
 	
 	}
@@ -41,6 +49,6 @@ document.write("cantidad de negativos : " + cantneg + "<br\>")
 document.write("cantidad de ceros : " + cantceros  + "<br\>")
 document.write("cantidad de numeros pares : " + cantnumpar  + "<br\>")
 document.write("promedio de positivos : " + prompos  + "<br\>")
-
+document.write("promedio de negativos : " + promneg  + "<br\>")
 
 }//FIN DE LA FUNCIÓN
