@@ -11,7 +11,7 @@ var pap =2
 var tij =3
 function comenzar()
 {
-	num=Math.round((Math.random()*3-1));
+	num=Math.round(Math.random()*(2)+1);
 console.log(num)
 
 
@@ -36,12 +36,36 @@ if (pie<num )
 //FIN DE LA FUNCIÓN
 function papel()
 {
+	if ( pap>num)
+{
+	alert(" usted gano")
+}
+if(pap ==num)
+{
+	alert("usted empato")
+}
+if (pap<num )
+{
+	alert("usted perdio")
+}
 
 
 }
 //FIN DE LA FUNCIÓN
 function tijera()
 {
+	if ( tij>num)
+{
+	alert(" usted gano")
+}
+if(tij ==num)
+{
+	alert("usted empato")
+}
+if (tij<num )
+{
+	alert("usted perdio")
+}
 
 
 }
