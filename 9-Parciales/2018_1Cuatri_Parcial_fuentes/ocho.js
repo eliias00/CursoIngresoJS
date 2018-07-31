@@ -11,13 +11,18 @@ function mostrar()
     var acumpos=0
     var sumaneg
     var acumneg=0
+    var max 
+    var min
+    var letramax
+    var letramin
     while(res==true)
         {   
             num=parseInt(prompt("ingrese numero"))
-            acumpos
+            acumpos=acumpos+num
+           
+            acumneg=acumneg+num
             cont++
-            acumneg++
-            while(num<-100||num>100)
+            while(num<-100||num>100 || isNaN(num))
                 {
                   num=parseInt(prompt("vuelva a ingresar numero"))
                 }
@@ -36,23 +41,35 @@ function mostrar()
             {
                 contcero++
             }
-
+            if(cont==0)
+            {
+               
+                min=num
+                max=num
+            }
+            if(num>max)
+             {
+               max=num
+            letramax=letra
+             }
+             if(num<min)
+             {
+                 min=num
+                 letramin=letra
+             }
            
 
     }
      if(num>0)
             {
-                prom=acumpos
+                prom=acumpos/cont
                 
             }
-    
-    
-
-    if(num<0)
+    else
         {
-           sumaneg=acumneg-=num
+           sumaneg=acumneg++
         }
-
+    
     
 
 
@@ -61,4 +78,5 @@ document.write("numeros impares: " + contimpar + "<br>")
 document.write("cantidad de ceros: " + contcero + "<br>")
 document.write("promedio de positivos: " + prom + "<br>")
 document.write("suma de negativos: " + sumaneg + "<br>")
+document.write("numero maximo: " + max + " y letra maxima: " + letramax + " numero minimo: " + min + " y letra minima " + letramin + "<br>")
 }
