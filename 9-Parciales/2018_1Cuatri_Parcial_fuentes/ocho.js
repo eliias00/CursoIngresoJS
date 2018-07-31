@@ -14,7 +14,7 @@ function mostrar()
     while(res==true)
         {   
             num=parseInt(prompt("ingrese numero"))
-            acumpos++
+            acumpos
             cont++
             acumneg++
             while(num<-100||num>100)
@@ -37,13 +37,14 @@ function mostrar()
                 contcero++
             }
 
-            if(num>0)
-            {
-                prom=acumpos+num
-                
-            }
+           
 
     }
+     if(num>0)
+            {
+                prom=acumpos
+                
+            }
     
     
 
