@@ -23,7 +23,7 @@ function mostrar()
      var nombrevieja;
 
     for(cont=0;cont<4;cont++)
-     {
+    {
        nombre=prompt("ingrese nombre");
 
        sexo=prompt("ingrese sexo");
@@ -86,7 +86,7 @@ function mostrar()
           nombremin=nombre;
         }
 
-}
+    }
 prom_muj= acum_muj/cant_muj;
 prom_hom= acum_hom/cant_hom;
 prom_total=(acum_muj+acum_hom)/cont;

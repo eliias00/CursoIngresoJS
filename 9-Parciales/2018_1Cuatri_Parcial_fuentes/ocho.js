@@ -1,5 +1,5 @@
 function mostrar()
-{
+{//hay un problema con los max y min
     var letra
     var num
     var cont=0
