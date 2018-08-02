@@ -1,7 +1,79 @@
 function mostrar()
 {
+  var nota;
+  var sexo;
+  var cont=0;
+  var suma=0
+  var prom;
+  var min;
+  var sexmin;
+  var cantmasc=0;
+  while(cont<5)
+  {
+    nota=prompt("ingrese nota");
+    nota=parseInt(nota);
+    suma=suma+nota;
+   while(nota<0||nota>10 || isNaN(nota))
+   {
+     nota=prompt("vuelva a ingresar nota");
+     nota=parseInt(nota);
+     
+   }
+   
+   sexo=prompt("ingrese sexo");
+   sexo=sexo.toLowerCase();
+   while(sexo!="f"&& sexo!="m")
+  {
+    sexo=prompt("vuelva a ingresar sexo");
+   sexo=sexo.toLowerCase();
+   }
+  
+
+   if(cont==0)
+   {
+     min=nota;
+     
+   }
+   if(nota<min)
+   {
+     min=nota;
+     sexmin=sexo;
+   }
+   if(sexo=="m" && nota >=6)
+   {
+    cantmasc++;
+   }
+
+   cont++;
+  }
+  prom=suma/cont;
+     
     
-     var nombre;
+  document.write("promedio: " + prom + "<br>");
+  document.write("nota mas baja: " + min + "sexo mas bajo: " + sexmin + "<br>");
+  document.write("cantidad de varones con nota >=6 : " + cantmasc + "<br>");
+    
+ 
+ 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /*var nombre;
      var edad;
      var sexo;
      var cont=0;
@@ -105,7 +177,7 @@ document.write("promedio total: " + prom_total + "<br>");
 document.write("nombre del mas viejo: " + nombremax + "<br>");
 document.write("nombre del mas joven: " + nombremin + "<br>");
 document.write("sexo del mas viejo: " + sexmax + "<br>");
-document.write("nombre de la mujer mas vieja: " + nombrevieja + "<br>");
+document.write("nombre de la mujer mas vieja: " + nombrevieja + "<br>");*/
   
   
   
@@ -127,49 +199,6 @@ document.write("nombre de la mujer mas vieja: " + nombrevieja + "<br>");
   
   
   
-   /*var cont=0
-    var nota
-    var sexo
-    var promedio
-    var acum=0
-    var min=10
-    var sexmin
-    var masc6=0
-        for( cont=0;cont<5;cont++ )
-        {
-            nota=parseInt(prompt( "ingrese 5 notas" ))
-           acum=acum+nota
-           
-            while(nota<0||nota>10)
-           {
-            nota=parseInt(prompt("vuelva a ingresar nota "))
-           }
-            sexo=prompt("ingrese sexo")
-
-            while(sexo!="f" && sexo!="m")
-            {
-                sexo=prompt("vuelva a ingresar sexo ")
-            }
-
-             if(nota<min)
-        
-            {
-                min=nota
-                sexmin=sexo
-            }
-            if(nota>=6 && sexo=="m")
-            {
-             masc6++
-            }
-
-        }
-         
-             promedio=acum/cont
-             
-
-alert("la nota mas baja: " + min  + " y el sexo: " + sexmin )
-alert("el promedio es: " + promedio)
-alert("cantidad de varon con nota mayor o igual a 6: " + masc6)       */ 
 
 
 }
