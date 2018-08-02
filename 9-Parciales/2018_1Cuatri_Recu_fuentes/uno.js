@@ -1,13 +1,17 @@
 
 function mostrar()
 {
-    var base = parseInt(prompt("ingrese base"));
-    var altura =parseInt(prompt("ingrese altura"));
-    var supe
+    var base;
+    var altura;
+    var superficie;
     var peri
+    base=prompt("ingrese base");
+    base=parseInt(base);
+    altura =prompt("ingrese altura")
+    altura=parseInt(altura);
     
-    supe=(base*altura)/2
-    peri= base*3
-    alert("la superficie es: " + supe + " y el perimetro es: " + peri)
+superficie=(base*altura)/2
+peri=base*3
 
+alert("superficie: " + superficie + " y perimetro: "  + peri)
 }

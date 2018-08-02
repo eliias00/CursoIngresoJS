@@ -27,10 +27,11 @@ function mostrar()
        nombre=prompt("ingrese nombre");
 
        sexo=prompt("ingrese sexo");
-
+    sexo=sexo.toLowerCase()
        while(sexo!="f" && sexo!= "m")
         {
         sexo=prompt("vuelva a ingresar sexo valido");
+        sexo=sexo.toLowerCase()
         }
        
         edad=prompt("ingrese edad");

@@ -1,45 +1,59 @@
 function mostrar()
 {
-    var edad;
-    var sexo;
     var nota;
     var cont=0;
-    var acum=0;
+    var sexo;
+    var max;
+    var min;
+    var sexmin;
+    var suma;
     var prom;
-    var contmay=0
-    for(var cont=0;cont<5;cont++)
- { 
-    nota=prompt("ingrese 5 nota");
-    nota=parseInt(nota);
-    acum=acum+nota
-    
-     while(nota<0||nota>10 || isNaN(nota))
-     {
-     nota =prompt("vuelva a ingresar nota");
+    var edad;
+    var contmasc=0;
+    while(cont<5)
+    {nota=prompt("ingrese nota");
      nota=parseInt(nota);
-     cont++
-     }
+       while(nota<0||nota>10 || isNaN(nota))
+        {
+            nota=prompt("vuelva a ingresar nota");
+            nota=parseInt(nota);
+            suma=suma+nota;
+        }
+        edad=prompt("ingrese edad")
+        edad=parseInt(edad)
+      sexo=prompt("ingrese sexo");
+      sexo=sexo.toLowerCase();
+      while(sexo!="f" && sexo!="m")
+       {
+           sexo=prompt("vuelva a ingresar sexo");
+           sexo=sexo.toLowerCase();
+       }
+       
 
-  edad=prompt("ingrese la edad ");
-  edad = parseInt(edad);
-
-   sexo=prompt("ingrese sexo");
-   while(sexo!="f" && sexo!="m" )
-   {
-   sexo =prompt("vuelva a ingresar sexo");
-   }
-if(sexo=="m" && edad >18 && nota >=6)
-{
-contmay++
+       if(cont==0)
+       {
+           max=nota;
+           min=nota;
+       }
+       if(nota>max)
+       {
+           max=nota;
+       }
+       if(nota<min)
+       {
+           nota=min;
+           sexmin=sexo;
+       }
+       if(sexo=="m" && nota>=6)
+       {
+contmasc++
+       }
+cont++;
+    }
+    prom=suma/cont
+document.write("promedio: " + prom + "<br>" )
+document.write("nota mas baja: " + min + "y sexo " + sexmin )
+document.write("cantidad de barones que su nota sea >6: " + contmasc )
+document.write("nota mas baja: " + min + "y sexo " + sexmin )
 }
 
-
-  }
-
-
-
-prom=acum/cont;
-
-document.write("promedio: " + prom + "<br>");
-document.write("cantidad de mayores: " + contmay + "<br>");
-}

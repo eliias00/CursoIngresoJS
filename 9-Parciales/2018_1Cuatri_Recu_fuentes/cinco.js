@@ -1,22 +1,24 @@
 function mostrar()
 {
-var semana;
-semana = prompt("ingrese dia de semana");
-switch(semana)
-{ case "sabado" :
-  case "domingo":
-  alert("buen finde");
-  break;
+    var dia;
+    dia=prompt("ingrese dia");
+    switch(dia)
+    {
+        case "domingo":
+        case "sabado":
+        alert("buen finde");
+        break;
 
-  case "lunes" :
-  case "martes":
-  case "miercoles" :
-  case "jueves":
-  case "viernes" :
-alert("a trabajar");
-break;
+        case"lunes":
+        case "martes":
+        case"miercoles":
+        case"jueves":
+        case "viernes":
+        alert("a trabajar ")
+        break;
+         default:
+         alert( " dia no es valido");
 
-  default:
-alert("no es dia valido");
-}
+    }
+
 }

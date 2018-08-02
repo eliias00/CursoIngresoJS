@@ -1,7 +1,8 @@
 function mostrar()
 {
-    var nom=document.getElementById("elNombre").value
-    var loc=document.getElementById("laLocalidad").value
-    alert("usted es: " + nom + " y vive en la localidad: " + loc)
-  
+    var nombre;
+    var ciudad;
+    nombre=document.getElementById("elNombre").value
+   ciudad=document.getElementById("laLocalidad").value
+   alert("usted es: " + nombre + " y vive en la localidad de: "  + ciudad)
 }

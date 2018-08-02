@@ -22,7 +22,7 @@ function mostrar()
        }
 
        suma=suma+peso
-       cont++
+       
        
        temp=parseInt(prompt("ingrese temperatura"))
        while(temp<-30||temp>30|| isNaN(temp))
@@ -41,7 +41,7 @@ function mostrar()
        min=peso
        max=peso
    }
-   if(peso>max)
+   else if(peso>max)
    {
        max=peso
        marca_pes=marca
@@ -55,6 +55,7 @@ function mostrar()
    {
      cant_0++
    }
+   cont++
 
 }
 prom=suma/cont

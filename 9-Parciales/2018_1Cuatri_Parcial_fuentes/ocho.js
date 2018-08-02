@@ -1,5 +1,5 @@
 function mostrar()
-{//hay un problema con los max y min
+{
     var letra
     var num
     var cont=0
@@ -16,12 +16,12 @@ function mostrar()
     var letramax
     var letramin
     while(res==true)
-        {   
+{    
             num=parseInt(prompt("ingrese numero"))
             acumpos=acumpos+num
            
             acumneg=acumneg+num
-            cont++
+            
             while(num<-100||num>100 || isNaN(num))
                 {
                   num=parseInt(prompt("vuelva a ingresar numero"))
@@ -38,26 +38,28 @@ function mostrar()
          contimpar++
         }
         else
+        {
+            contcero++
+        }
+
+        if(cont==0)
+        {
+            
+            min=num
+            max=num
+        } else if(num>max)
             {
-                contcero++
-            }
-            if(cont==0)
-            {
-               
-                min=num
                 max=num
+                letramax=letra
             }
-            if(num>max)
-             {
-               max=num
-            letramax=letra
-             }
-             if(num<min)
-             {
-                 min=num
-                 letramin=letra
-             }
-           
+            if(num<min)
+            {
+                min=num
+                letramin=letra
+            } 
+        
+        
+           cont++
 
     }
      if(num>0)
@@ -78,5 +80,5 @@ document.write("numeros impares: " + contimpar + "<br>")
 document.write("cantidad de ceros: " + contcero + "<br>")
 document.write("promedio de positivos: " + prom + "<br>")
 document.write("suma de negativos: " + sumaneg + "<br>")
-document.write("numero maximo: " + max + " y letra maxima: " + letramax + " numero minimo: " + min + " y letra minima " + letramin + "<br>")
+document.write("numero maximo: " + max + " y letra maxima: " + letramax + "<br>" + " numero minimo: " + min + " y letra minima " + letramin + "<br>")
 }
